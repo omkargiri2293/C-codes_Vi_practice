@@ -8,19 +8,23 @@ int main()
 {
     int a, b, c;
 
-    printf("enter three numbers = ");
-    scanf("a=%d b=%d c=%d", &a, &b, &c);
+    // Input from user
+    printf("Enter three numbers:\n");
+    scanf("%d %d %d", &a, &b, &c);
 
+    // Logic to find the greatest
     if (a >= b && a >= c)
     {
-        printf("/n a = %d is greatest of 3 numbers", a);
+        printf("The greatest number is: %d\n", a);
     }
     else if (b >= a && b >= c)
     {
-        printf("/n b = %d is greatest of 3 numbers", b);
+        printf("The greatest number is: %d\n", b);
     }
     else
     {
-        printf("/n c = %d is greatest of 3 numbers", c);
+        printf("The greatest number is: %d\n", c);
     }
+
+    return 0;
 }
