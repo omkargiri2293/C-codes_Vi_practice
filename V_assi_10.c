@@ -26,10 +26,11 @@ int main()
         {
             if (arr[i] == arr[j])
             {
-                count == ;
+                count++;
                 break;
             }
         }
     }
+    printf("no of duplicate elements in an array = %d", count);
     return 0;
 }
