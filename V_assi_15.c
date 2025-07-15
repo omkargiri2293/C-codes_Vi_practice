@@ -1,39 +1,38 @@
-/*
-Implement a function to separate odd and even integers of an array into separate arrays using pointers.
-*/
 #include <stdio.h>
-void seperateOddEven(int *arr, int n);
+
+void separateOddEven(int *arr, int n)
+{
+    printf("Even elements: ");
+    for (int i = 0; i < n; i++)
+    {
+        if (*(arr + i) % 2 == 0)
+            printf("%d ", *(arr + i));
+    }
+
+    printf("\nOdd elements: ");
+    for (int i = 0; i < n; i++)
+    {
+        if (*(arr + i) % 2 != 0)
+            printf("%d ", *(arr + i));
+    }
+
+    printf("\n");
+}
 
 int main()
 {
     int n;
-    printf("enter no elements in array ");
+    printf("Enter number of elements in array: ");
     scanf("%d", &n);
 
     int arr[n];
-    printf("enter elements in an array ");
+    printf("Enter elements of the array: ");
     for (int i = 0; i < n; i++)
     {
         scanf("%d", arr + i); // pointer style input
     }
 
-    seperateOddEven(arr, n);
+    separateOddEven(arr, n);
 
     return 0;
-}
-
-void seperateOddEven(int *arr, int n)
-{
-    int odd, even;
-    for (int i = 0; i < n; i++)
-    {
-        if (*(arr + i) % 2 == 0)
-        {
-            printf("%d", *(arr + i));
-        }
-        else
-        {
-            printf("%d", arr + i);
-        }
-    }
 }

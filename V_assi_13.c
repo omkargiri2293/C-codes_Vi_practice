@@ -39,7 +39,7 @@ void countfrequency(int *arr, int n)
         int count = 1;
         for (int j = i + 1; j < n; j++)
         {
-            if (*(arr + i) == *(arr + j))
+            if (*(arr + i) == *(arr + j)) // arr[i] is same as *(arr + i)
             {
                 count++;
                 visited[j] = 1;
