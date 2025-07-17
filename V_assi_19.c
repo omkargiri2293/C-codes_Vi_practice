@@ -48,11 +48,13 @@ int main()
     }
 
     // print sum
+    printf("sum of matrices is \n");
     for (int i = 0; i < rows; i++)
     {
         for (int j = 0; j < columns; j++)
         {
             printf("%d\t", sum[i][j]);
         }
+        printf("\n");
     }
 }

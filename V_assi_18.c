@@ -8,12 +8,12 @@ int main()
 
     int arr[3][3];
 
-    printf(" enter elements in matrix ");
+    printf(" enter elements in matrix \n");
     for (int i = 0; i < 3; i++)
     {
         for (int j = 0; j < 3; j++)
         {
-            printf("Matrix[%d][%d]", i, j);
+            printf("Matrix[%d][%d]= ", i, j);
             scanf("%d", &arr[i][j]);
         }
     }
@@ -22,7 +22,12 @@ int main()
     {
         for (int j = 0; j < 3; j++)
         {
-            printf("%d\n", arr[i][j]);
+            printf("%d\t", arr[i][j]);
+            /*The `\t` in the string is an escape sequence that represents a tab character.
+             When used in functions like `printf`, it inserts a horizontal tab space,
+              which helps in aligning output into columns or creating indentation. 
+              For example, printing `printf("Hello\tWorld\n");
+              would display **Hello    World** with some space between the words.*/
         }
         printf("\n");
     }

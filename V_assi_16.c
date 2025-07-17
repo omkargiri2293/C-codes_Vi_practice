@@ -3,7 +3,40 @@
 */
 
 #include <stdio.h>
-void secondLargestElement(int *arr, int n);
+
+void secondLargestElement(int *arr, int n)
+{
+    if (n < 2)
+    {
+        printf("Array must have at least two elements.\n");
+        return;
+    }
+
+    int first = *arr;
+    int second = -1;
+
+    for (int i = 1; i < n; i++)
+    {
+        if (*(arr + i) > first)
+        {
+            second = first;
+            first = *(arr + i);
+        }
+        else if (*(arr + i) < first && (*(arr + i) > second || second == -1))
+        {
+            second = *(arr + i);
+        }
+    }
+
+    if (second == -1)
+    {
+        printf("There is no second largest element (all elements may be equal).\n");
+    }
+    else
+    {
+        printf("Second largest element is %d\n", second);
+    }
+}
 
 int main()
 {
@@ -21,24 +54,4 @@ int main()
     secondLargestElement(arr, n);
 
     return 0;
-}
-
-void secondLargestElement(int *arr, int n)
-{
-    int first = *arr;
-    int second = -1;
-
-    prinf("second largest element = ");
-    for (int i = 0; i < n; i++)
-    {
-        if (*(arr + i) > first)
-        {
-            second = first;
-            first = *(arr + i);
-        }
-        else if (*(arr + i) < first && *(arr + i) > second || second = -1)
-        {
-            second = *(arr + i);
-        }
-    }
 }

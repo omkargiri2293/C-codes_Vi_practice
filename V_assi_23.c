@@ -1,0 +1,3 @@
+/*
+Write a C program to find the length of a string without using library functions. 
+*/

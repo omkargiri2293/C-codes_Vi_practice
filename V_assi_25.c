@@ -1,0 +1,3 @@
+/*
+Implement a function to count the total number of vowels or consonants in a string.
+*/
